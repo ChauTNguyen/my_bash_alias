@@ -15,14 +15,15 @@ alias reddit="dev; cd redditCustomizedFeed; python3 run.py -t -r; python3 run.py
 alias back="cd -; ls;"
 alias push="git push -u origin master;"
 alias make_flask_app="
-    pyvenv flask;
-    flask/bin/pip3 install flask;
-    flask/bin/pip3 install flask-mail;
+    pyvenv env;
+    env/bin/pip3 install flask;
+    env/bin/pip3 install flask-mail;
     mkdir app;
     mkdir app/static;
     mkdir app/templates;
     mkdir tmp;
     touch run.py;
+    chmod a+x run.py;
     touch config.py;
     touch app/__init__.py;
     touch app/views.py;
