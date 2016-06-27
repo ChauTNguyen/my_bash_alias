@@ -11,7 +11,7 @@ alias des="cd ~/Desktop"
 alias dev="cd ~/Desktop/Files/dev; ls"
 alias update_src="source ~/.bash_profile;"
 alias killdock="killall Dock;"
-alias reddit="dev; cd redditCustomizedFeed; source env/bin/activate; ./run.py -t; ./run.py -r; deactivate;"
+alias reddit="dev; cd redditCustomizedFeed; source env/bin/activate; ./run.py -a; deactivate;"
 alias back="cd -; ls;"
 alias push="git push -u origin master;"
 alias make_flask_app="
@@ -34,8 +34,10 @@ alias ...="cd ../../" # Go back 2 directory levels
 alias .3="cd ../../../" # Go back 3 directory levels
 alias .4="cd ../../../../" # Go back 4 directory levels
 alias openf="open -a Finder ./" # Open current directory in MacOS Finder.
-
+alias show_ports="sudo lsof -i -n -P | grep LISTEN" # Show all ports currently active.
 # end Alias
 
 PATH=$PATH:/home/username/bin:/usr/local/homebrew
 export PATH
+
+export PATH="/Applications/Postgres.app/Contents/Versions/9.5/bin:$PATH"
